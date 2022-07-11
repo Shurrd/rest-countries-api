@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+:root {
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-background: hsl(207, 26%, 17%);
+  --primary-font-family: "Nunito Sans", sans-serif;
+  --primary-box-shadow: 9px 5px 71px 19px rgba(0, 0, 0, 0.04);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: var(--light-mode-background);
+  font-family: var(--primary-font-family);
+}
+nav {
+  box-shadow: var(--primary-box-shadow);
+}
+.search {
+  color: var(--light-mode-input);
+  box-shadow: var(--primary-box-shadow);
+}
+.filter-search {
+  box-shadow: var(--primary-box-shadow);
+  color: var(--light-mode-input);
+}
+.card {
+  box-shadow: var(--primary-box-shadow);
 }
