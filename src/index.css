@@ -11,9 +11,12 @@
   --dark-mode-elements: hsl(209, 23%, 22%);
   --dark-mode-background: hsl(207, 26%, 17%);
   --primary-font-family: "Nunito Sans", sans-serif;
-  --primary-box-shadow: 9px 5px 71px 19px rgba(0, 0, 0, 0.04);
+  --primary-box-shadow: 9px 5px 71px 19px rgba(0, 0, 0, 0.07);
 }
 
+p {
+  color: var(--light-mode-text);
+}
 body {
   background-color: var(--light-mode-background);
   font-family: var(--primary-font-family);
