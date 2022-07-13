@@ -28,10 +28,19 @@ nav {
   color: var(--light-mode-input);
   box-shadow: var(--primary-box-shadow);
 }
+.dark-input {
+  background-color: var(--dark-mode-elements);
+}
 .filter-search {
   box-shadow: var(--primary-box-shadow);
   color: var(--light-mode-input);
 }
 .card {
   box-shadow: var(--primary-box-shadow);
+}
+.dark-element {
+  background-color: var(--dark-mode-elements);
+}
+.dark-back {
+  background-color: var(--dark-mode-background);
 }
