@@ -11,7 +11,6 @@
   --dark-mode-elements: hsl(209, 23%, 22%);
   --dark-mode-background: hsl(207, 26%, 17%);
   --primary-font-family: "Nunito Sans", sans-serif;
-  --primary-box-shadow: 9px 5px 71px 19px rgba(0, 0, 0, 0.07);
 }
 
 p {
@@ -21,26 +20,20 @@ body {
   background-color: var(--light-mode-background);
   font-family: var(--primary-font-family);
 }
-nav {
-  box-shadow: var(--primary-box-shadow);
-}
+
 .search {
   color: var(--light-mode-input);
-  box-shadow: var(--primary-box-shadow);
 }
 .dark-input {
   background-color: var(--dark-mode-elements);
 }
 .filter-search {
-  box-shadow: var(--primary-box-shadow);
   color: var(--light-mode-input);
 }
-.card {
-  box-shadow: var(--primary-box-shadow);
-}
+
 .dark-element {
   background-color: var(--dark-mode-elements);
 }
-.dark-back {
+.dark-bg {
   background-color: var(--dark-mode-background);
 }
