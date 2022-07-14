@@ -5,9 +5,10 @@ import { BiArrowBack } from "react-icons/bi";
 import { data } from "autoprefixer";
 
 const CountryDetails = () => {
-  const { darkMode } = useGlobalContext();
+  const { darkMode, data } = useGlobalContext();
   const { alpha3Code } = useParams();
   const [country, setCountry] = useState([]);
+  const newBorders = [];
 
   useEffect(() => {
     async function getCountry() {
@@ -42,6 +43,7 @@ const CountryDetails = () => {
     flags,
     topLevelDomain,
   } = country;
+
   return (
     <div className="pb-[20vh]">
       <Link to="/">
@@ -94,7 +96,8 @@ const CountryDetails = () => {
             Currency:{" "}
             {currencies?.map((item, index) => (
               <span className="font-normal" key={index}>
-                {item.name} {item.symbol}
+                {item.name}{" "}
+                <span className="font-semibold">({item.symbol})</span>
               </span>
             ))}
           </p>
@@ -107,14 +110,20 @@ const CountryDetails = () => {
         </div>
         <div className="ml-8 mt-10 flex gap-8 items-center flex-wrap ">
           <p className="text-xl font-semibold">Border Countries: </p>
-          {borders?.map((item, index) => (
-            <div
-              className="self-center mt-1 bg-white shadow-lg p-2"
-              key={index}
-            >
-              {item}
+          {borders?.length ? (
+            borders?.map((item, index) => (
+              <div
+                className="self-center mt-1 bg-white shadow-lg p-2"
+                key={index}
+              >
+                <Link to={`/country/${item}`}>{item}</Link>
+              </div>
+            ))
+          ) : (
+            <div className="self-center mt-1 bg-white shadow-lg p-2">
+              No Borders ...
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>

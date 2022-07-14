@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 
 const AppContext = React.createContext();
 
 const url = "https://restcountries.com/v2/all";
-const regionUrl = "https://restcountries.com/v2/all?fields=region";
 
 const AppProvider = ({ children }) => {
   const [data, setData] = useState([]);
-  const [regions, setRegions] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [darkMode, setDarkMode] = useState(true);
@@ -40,19 +38,18 @@ const AppProvider = ({ children }) => {
       .catch((error) => console.log(error, "error"));
   }, []);
 
-  useEffect(() => {
-    fetch(regionUrl)
-      .then((resp) => resp.json())
-      .then((item) => {
-        setRegions(item);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(regionUrl)
+  //     .then((resp) => resp.json())
+  //     .then((item) => {
+  //       setRegions(item);
+  //     });
+  // }, []);
 
   return (
     <AppContext.Provider
       value={{
         data,
-        regions,
         setData,
         searchInput,
         searchItems,

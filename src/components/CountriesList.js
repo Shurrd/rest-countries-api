@@ -12,7 +12,7 @@ const CountriesList = () => {
           ? filteredResults.map((country) => (
               <Country key={country.alpha3Code} {...country} />
             ))
-          : data.map((country) => (
+          : data?.map((country) => (
               <Country key={country.alpha3Code} {...country} />
             ))}
       </div>

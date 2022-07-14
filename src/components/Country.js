@@ -21,7 +21,9 @@ const Country = ({ flags, population, region, name, capital, alpha3Code }) => {
               <p className="mb-7 text-3xl font-extrabold text-white">{name}</p>
               <p className="text-[1.1rem] font-semibold my-1 text-white">
                 Population:{" "}
-                <span className="font-normal text-white">{population}</span>{" "}
+                <span className="font-normal text-white">
+                  {population.toLocaleString()}
+                </span>{" "}
               </p>
               <p className="text-[1.1rem] font-semibold  my-1 text-white">
                 Region: <span className="font-normal text-white">{region}</span>{" "}
@@ -44,7 +46,10 @@ const Country = ({ flags, population, region, name, capital, alpha3Code }) => {
             <div className="mx-7 my-7">
               <p className="mb-7 text-3xl font-extrabold">{name}</p>
               <p className="text-[1.1rem] font-semibold my-1 text-black">
-                Population: <span className="font-normal">{population}</span>{" "}
+                Population:{" "}
+                <span className="font-normal">
+                  {population.toLocaleString()}
+                </span>{" "}
               </p>
               <p className="text-[1.1rem] font-semibold  my-1 text-black">
                 Region: <span className="font-normal">{region}</span>{" "}
