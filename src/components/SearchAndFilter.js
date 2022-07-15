@@ -1,23 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { useGlobalContext } from "../utils/context";
 
 const SearchAndFilter = () => {
-  const { searchItems, darkMode, data, setData } = useGlobalContext();
-
-  const url = "https://restcountries.com/v2/all";
+  const { searchItems, darkMode, handleRegion, regionRef } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
-  const regionRef = useRef();
-
-  const handleRegion = (e) => {
-    const selectValue = regionRef.current.value;
-    fetch(`https://restcountries.com/v2/region/${selectValue}`)
-      .then((resp) => resp.json())
-      .then((item) => setData(item))
-      .catch((error) => error);
   };
 
   return (
@@ -41,8 +30,8 @@ const SearchAndFilter = () => {
           <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[12%]">
             <select
               className="h-16 text-xl pl-4 w-full filter-search shadow-xl outline-none dark-element"
-              ref={regionRef}
               onChange={handleRegion}
+              ref={regionRef}
             >
               <option value="all">Filter by Region</option>
               <option value="Africa">Africa</option>
@@ -77,7 +66,7 @@ const SearchAndFilter = () => {
               ref={regionRef}
               onChange={handleRegion}
             >
-              <option value="Filter by Region">Filter by Region</option>
+              <option value="all">Filter by Region</option>
               <option value="Africa">Africa</option>
               <option value="Americas">Americas</option>
               <option value="Antarctic">Antarctic</option>

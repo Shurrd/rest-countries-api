@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../utils/context";
 import { useParams, Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import { data } from "autoprefixer";
 
 const CountryDetails = () => {
-  const { darkMode, data } = useGlobalContext();
+  const { darkMode } = useGlobalContext();
   const { alpha3Code } = useParams();
   const [country, setCountry] = useState([]);
-  const newBorders = [];
 
   useEffect(() => {
     async function getCountry() {

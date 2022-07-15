@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [darkMode, setDarkMode] = useState(true);
+  const regionRef = useRef();
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
@@ -38,13 +39,20 @@ const AppProvider = ({ children }) => {
       .catch((error) => console.log(error, "error"));
   }, []);
 
-  // useEffect(() => {
-  //   fetch(regionUrl)
-  //     .then((resp) => resp.json())
-  //     .then((item) => {
-  //       setRegions(item);
-  //     });
-  // }, []);
+  const handleRegion = () => {
+    const selectValue = regionRef.current.value;
+    if (selectValue === "all") {
+      fetch("https://restcountries.com/v2/all")
+        .then((resp) => resp.json())
+        .then((item) => setData(item))
+        .catch((error) => error);
+    } else {
+      fetch(`https://restcountries.com/v2/region/${selectValue}`)
+        .then((resp) => resp.json())
+        .then((item) => setData(item))
+        .catch((error) => error);
+    }
+  };
 
   return (
     <AppContext.Provider
@@ -56,6 +64,8 @@ const AppProvider = ({ children }) => {
         filteredResults,
         darkModeHandler,
         darkMode,
+        regionRef,
+        handleRegion,
       }}
     >
       {children}
