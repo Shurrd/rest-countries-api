@@ -27,7 +27,7 @@ const SearchAndFilter = () => {
               onChange={(e) => searchItems(e.target.value)}
             />
           </form>
-          <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[12%]">
+          <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[20%]">
             <select
               className="h-16 text-xl pl-4 w-full filter-search shadow-xl outline-none dark-element"
               onChange={handleRegion}
@@ -60,7 +60,7 @@ const SearchAndFilter = () => {
               onChange={(e) => searchItems(e.target.value)}
             />
           </form>
-          <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[12%]">
+          <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[20%]">
             <select
               className="h-16 text-xl pl-4 w-full filter-search shadow-xl outline-none"
               ref={regionRef}

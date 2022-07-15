@@ -30,7 +30,6 @@ body {
 .filter-search {
   color: var(--light-mode-input);
 }
-
 .dark-element {
   background-color: var(--dark-mode-elements);
 }

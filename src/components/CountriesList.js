@@ -6,8 +6,8 @@ const CountriesList = () => {
   const { data, searchInput, filteredResults } = useGlobalContext();
 
   return (
-    <div>
-      <div className="mt-10 grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 2xl:grid-cols-4 gap-28 place-items-center mx-20 pb-[32%]">
+    <section>
+      <div className="mt-10 grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 2xl:grid-cols-4 gap-32 place-items-center mx-16 pb-[32%]">
         {searchInput !== ""
           ? filteredResults.map((country) => (
               <Country key={country.alpha3Code} {...country} />
@@ -16,7 +16,7 @@ const CountriesList = () => {
               <Country key={country.alpha3Code} {...country} />
             ))}
       </div>
-    </div>
+    </section>
   );
 };
 

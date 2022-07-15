@@ -6,7 +6,7 @@ import { useGlobalContext } from "../utils/context";
 const Home = () => {
   const { darkMode } = useGlobalContext();
   return (
-    <div>
+    <section>
       {!darkMode ? (
         <div className="dark-bg">
           <SearchAndFilter />
@@ -18,7 +18,7 @@ const Home = () => {
           <CountriesList />
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

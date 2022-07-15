@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CountryDetails from "./pages/CountryDetails";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             element={<CountryDetails />}
           />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

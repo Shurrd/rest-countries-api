@@ -9,7 +9,7 @@ const Country = ({ flags, population, region, name, capital, alpha3Code }) => {
     <div>
       <Link to={`/country/${alpha3Code}`}>
         {!darkMode ? (
-          <div className="dark-element lg:h-[27rem] card lg:w-[23rem] md:w-[18rem] sm:h-[28rem] sm:w-[23rem] rounded-xl pb-14">
+          <div className="dark-element lg:h-[27rem] card lg:w-[21rem] md:w-[18rem] sm:h-[28rem] sm:w-[23rem] rounded-xl pb-14">
             <div className="w-full h-[50%]">
               <img
                 src={flags.png}
@@ -35,7 +35,7 @@ const Country = ({ flags, population, region, name, capital, alpha3Code }) => {
             </div>
           </div>
         ) : (
-          <div className="bg-white lg:h-[27rem] shadow-xl lg:w-[23rem] md:w-[18rem] sm:h-[28rem] sm:w-[23rem] rounded-xl">
+          <div className="bg-white lg:h-[27rem] shadow-xl lg:w-[21rem] md:w-[18rem] sm:h-[28rem] sm:w-[23rem] rounded-xl pb-14">
             <div className="w-full h-[50%] ">
               <img
                 src={flags.png}
