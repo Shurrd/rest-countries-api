@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <div>
       {!darkMode ? (
-        <nav className=" h-24 lg:h-28 flex justify-between pl-6 pr-6 lg:pr-16 lg:pl-16 items-center shadow-xl dark-element">
+        <nav className="h-20 lg:h-24 flex justify-between pl-6 pr-6 lg:pr-16 lg:pl-16 items-center shadow-xl dark-element">
           <Link to="/">
-            <p className="text-[1.2rem] lg:text-3xl text-white font-bold">
+            <p className="text-sm lg:text-xl text-white font-bold">
               Where in the world?
             </p>
           </Link>
@@ -20,22 +20,20 @@ const Navbar = () => {
             onClick={darkModeHandler}
           >
             <BsMoon className="text-white" />
-            <p className="text-[1rem] text-white lg:text-xl">Dark Mode</p>
+            <p className="text-white">Dark Mode</p>
           </div>
         </nav>
       ) : (
-        <nav className="bg-white h-24 lg:h-28 flex justify-between pl-6 pr-6 lg:pr-16 lg:pl-16 items-center shadow-xl">
+        <nav className="bg-white h-20 lg:h-24 flex justify-between pl-6 pr-6 lg:pr-16 lg:pl-16 items-center shadow-xl">
           <Link to="/">
-            <p className="text-[1.2rem] lg:text-3xl font-bold">
-              Where in the world?
-            </p>
+            <p className="text-sm lg:text-xl font-bold">Where in the world?</p>
           </Link>
           <div
             className="flex flex-row gap-3 items-center cursor-pointer"
             onClick={darkModeHandler}
           >
             <BsMoon />
-            <p className="text-[1rem] lg:text-xl">Dark Mode</p>
+            <p>Dark Mode</p>
           </div>
         </nav>
       )}

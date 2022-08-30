@@ -14,22 +14,22 @@ const SearchAndFilter = () => {
       {!darkMode ? (
         <div className="flex xl:flex-row xl:justify-between flex-col pt-10">
           <form
-            className="my-6 h-16 w-[95%] xl:w-[33%] left-0 right-0 mx-auto search shadow-md flex flex-row items-center xl:mx-14"
+            className="my-6 h-12 w-[95%] xl:w-[33%] left-0 right-0 mx-auto search shadow-md flex flex-row items-center xl:mx-14"
             onSubmit={handleSubmit}
           >
-            <div className="h-full dark-input  w-16 flex items-center pl-7">
+            <div className="h-full dark-input w-12 flex items-center pl-7">
               <BsSearch size={25} style={{ color: "white" }} />
             </div>
             <input
               type="text"
-              className="w-full h-full outline-none pl-3 text-xl dark-input"
+              className="w-full h-full outline-none pl-3 dark-input"
               placeholder="Search for a Country ..."
               onChange={(e) => searchItems(e.target.value)}
             />
           </form>
-          <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[20%]">
+          <div className="xl:my-auto my-8 mx-4 xl:mx-14 w-[40%] xl:w-[20%]">
             <select
-              className="h-16 text-xl pl-4 w-full filter-search shadow-xl outline-none dark-element"
+              className="h-12 pl-4 w-full filter-search shadow-xl outline-none dark-element"
               onChange={handleRegion}
               ref={regionRef}
             >
@@ -47,22 +47,22 @@ const SearchAndFilter = () => {
       ) : (
         <div className="flex xl:flex-row xl:justify-between flex-col mt-10">
           <form
-            className="my-6 h-16 w-[95%] xl:w-[33%] left-0 right-0 mx-auto search shadow-xl flex flex-row items-center xl:mx-14"
+            className="my-6 h-12 w-[95%] xl:w-[33%] left-0 right-0 mx-auto search shadow-xl flex flex-row items-center xl:mx-14"
             onSubmit={handleSubmit}
           >
-            <div className="h-full bg-white  w-16 flex items-center pl-7">
+            <div className="h-full bg-white w-12 flex items-center pl-7">
               <BsSearch size={25} style={{ color: "black" }} />
             </div>
             <input
               type="text"
-              className="w-full h-full outline-none pl-3 text-xl"
+              className="w-full h-full outline-none pl-3"
               placeholder="Search for a Country ..."
               onChange={(e) => searchItems(e.target.value)}
             />
           </form>
-          <div className="xl:my-auto my-8 mx-7 xl:mx-14 w-[40%] xl:w-[20%]">
+          <div className="xl:my-auto my-8 mx-4 xl:mx-14 w-[40%] xl:w-[20%]">
             <select
-              className="h-16 text-xl pl-4 w-full filter-search shadow-xl outline-none"
+              className="h-12 pl-4 w-full filter-search shadow-xl outline-none"
               ref={regionRef}
               onChange={handleRegion}
             >

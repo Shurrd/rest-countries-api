@@ -7,7 +7,7 @@ const CountriesList = () => {
 
   return (
     <section>
-      <div className="mt-10 grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 2xl:grid-cols-4 gap-32 place-items-center mx-16 pb-[32%]">
+      <div className="mt-10 grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-16 place-items-center mx-16 pb-[32%]">
         {searchInput !== ""
           ? filteredResults.map((country) => (
               <Country key={country.alpha3Code} {...country} />
